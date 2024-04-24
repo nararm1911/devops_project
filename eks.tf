@@ -1,8 +1,7 @@
 module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
-  cluster_name = "project"
-
+  cluster_name                   = local.name
   cluster_endpoint_public_access = true
 
   cluster_addons = {
