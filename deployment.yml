@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-deployment
+  labels:
+    app: project
+
+$spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: project
+    templates:
+      metadata:
+        labels:
+          app: project
+      spec:
+        conatainers:
+          - name: project
+            image: nginx:latest
+            ports:
+              - conatinerPort: 80
