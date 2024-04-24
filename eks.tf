@@ -8,7 +8,7 @@ module "eks" {
     coredns = {
       most_recent = true
     }
-    kibe-proxy = {
+    kube-proxy = {
       most_recent = true
     }
     vpc-cni = {
